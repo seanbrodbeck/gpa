@@ -8,43 +8,34 @@
  */
 
 ?>
+<div class="basic-page-wrap">
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
+<header class="entry-header">
+	<div class="col-sm-8 offset-sm-1">
+		<p><em>Section Title Here</em></p>
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-	</header><!-- .entry-header -->
+	</div>
+</header><!-- .entry-header -->
 
-	<div class="entry-content">
-		<?php
-			the_content();
+<section class="row">
+	<div class="col-3 nopad bluebg">
+		<?php get_sidebar();?>
+	</div>
 
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'gpa' ),
-				'after'  => '</div>',
-			) );
-		?>
-	</div><!-- .entry-content -->
+	<div class="col-9 nopad basic-page-content-right">
+		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<?php if ( get_edit_post_link() ) : ?>
-		<footer class="entry-footer">
-			<?php
-				edit_post_link(
-					sprintf(
-						wp_kses(
-							/* translators: %s: Name of current post. Only visible to screen readers */
-							__( 'Edit <span class="screen-reader-text">%s</span>', 'gpa' ),
-							array(
-								'span' => array(
-									'class' => array(),
-								),
-							)
-						),
-						get_the_title()
-					),
-					'<span class="edit-link">',
-					'</span>'
-				);
-			?>
-		</footer><!-- .entry-footer -->
-	<?php endif; ?>
-</article><!-- #post-<?php the_ID(); ?> -->
+			<div class="content">
+				<div class="basic-page-content whitebg">
+					<img src="<?php the_field('page_header_image');?>" />
+					<div class="basic-page-content-inner">
+						<?php the_content();?>
+					</div>
+				</div>
+			</div><!-- .entry-content -->
+		</article><!-- #post-<?php the_ID(); ?> -->
+	</div>
+
+</section>
+
+</div>

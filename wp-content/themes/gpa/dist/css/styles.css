@@ -755,15 +755,34 @@ h1 {
   font-family: "planeta";
   -webkit-font-smoothing: antialiased;
   word-spacing: -5px;
-  font-size: calc(20px + (32 - 20) * (100vw - 320px) / (1440 - 320)); }
+  font-size: calc(25px + (40 - 25) * (100vw - 320px) / (1440 - 320));
+  position: relative;
+  color: #25438d; }
+  h1:before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    left: -20px;
+    bottom: 5px;
+    top: 5px;
+    border-left: 1px solid #fbcd0b; }
 
 h2 {
   font-family: "planeta";
   -webkit-font-smoothing: antialiased;
   word-spacing: -5px;
   font-size: calc(20px + (38 - 20) * (100vw - 320px) / (1440 - 320));
+  position: relative;
+  color: #25438d;
+  font-size: 30px; }
+
+.home h2 {
+  font-family: "planeta";
+  -webkit-font-smoothing: antialiased;
+  word-spacing: -5px;
+  font-size: calc(20px + (38 - 20) * (100vw - 320px) / (1440 - 320));
   position: relative; }
-  h2:before {
+  .home h2:before {
     content: '';
     display: inline-block;
     position: absolute;
@@ -834,6 +853,9 @@ a:hover, a:active {
     display: inline-block;
     margin-left: 5px; }
 
+body {
+  background: #f5f9e9; }
+
 a {
   -webkit-transition: color .3s ease;
   -moz-transition: color .3s ease;
@@ -856,6 +878,12 @@ a {
 
 .row {
   margin: 0; }
+
+.whitebg {
+  background: #FFF; }
+
+.bluebg {
+  background: #5fcae3; }
 
 .white {
   color: #FFF; }
@@ -965,6 +993,24 @@ a {
   -moz-align-items: center;
   -ms-align-items: center;
   align-items: center; }
+
+.basic-page-wrap {
+  padding-top: 60px; }
+  .basic-page-wrap .basic-page-content-right {
+    position: relative;
+    top: -90px; }
+    .basic-page-wrap .basic-page-content-right .basic-page-content-inner {
+      padding: calc(20px + (40 - 20) * (100vw - 400px) / (1440 - 400)); }
+
+#secondary {
+  padding: 30px; }
+  #secondary section {
+    padding: 0;
+    margin-bottom: 30px; }
+    #secondary section ul {
+      padding: 0;
+      margin: 0;
+      padding-left: 20px; }
 
 header#masthead {
   background: #25438d; }
@@ -1124,6 +1170,24 @@ main section {
     main section#home-academy-life .aclife-bottom-right {
       height: 350px;
       height: 25vh; }
+  main section.landing-hero {
+    padding-top: 300px;
+    padding-bottom: 70px; }
+    main section.landing-hero .landing-hero-info {
+      background: #f5f9e9;
+      padding: calc(20px + (40 - 20) * (100vw - 400px) / (1440 - 400)) calc(20px + (40 - 20) * (100vw - 400px) / (1440 - 400)) calc(20px + (40 - 20) * (100vw - 400px) / (1440 - 400)) calc(30px + (80 - 30) * (100vw - 400px) / (1440 - 400)); }
+  main section.landing-tiles .landing-tile-outter {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex; }
+    main section.landing-tiles .landing-tile-outter .landing-tile {
+      margin-bottom: 30px;
+      background: #FFF;
+      /*	@include flexbox();*/ }
+      main section.landing-tiles .landing-tile-outter .landing-tile .landing-tile-info {
+        padding: 20px; }
 
 footer#colophon {
   padding: calc(20px + (60 - 20) * (100vw - 400px) / (1440 - 400)) calc(20px + (100 - 20) * (100vw - 400px) / (1440 - 400));

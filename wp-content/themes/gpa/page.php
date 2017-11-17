@@ -17,7 +17,7 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 
-			<section>
+
 				<div class="container">
 
 				<?php
@@ -34,7 +34,7 @@ get_header(); ?>
 				?>
 
 				</div>
-			</section>
+
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

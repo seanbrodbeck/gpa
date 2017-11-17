@@ -18,16 +18,9 @@ h1  {
 	font-family: "planeta";
   -webkit-font-smoothing: antialiased;
   word-spacing: -5px;
-  font-size: calc(20px + (32 - 20) * (100vw - 320px) / (1440 - 320));
-
-}
-
-h2 {
-  font-family: "planeta";
-  -webkit-font-smoothing: antialiased;
-  word-spacing: -5px;
-  font-size: calc(20px + (38 - 20) * (100vw - 320px) / (1440 - 320));
+  font-size: calc(25px + (40 - 25) * (100vw - 320px) / (1440 - 320));
   position:relative;
+  color:$blue;
   &:before {
     content:'';
     display:inline-block;
@@ -36,6 +29,35 @@ h2 {
     bottom:5px;
     top:5px;
     border-left:1px solid $yellow;
+  }
+}
+
+h2 {
+  font-family: "planeta";
+  -webkit-font-smoothing: antialiased;
+  word-spacing: -5px;
+  font-size: calc(20px + (38 - 20) * (100vw - 320px) / (1440 - 320));
+  position:relative;
+  color:$blue;
+  font-size:30px;
+}
+
+.home {
+  h2 {
+    font-family: "planeta";
+    -webkit-font-smoothing: antialiased;
+    word-spacing: -5px;
+    font-size: calc(20px + (38 - 20) * (100vw - 320px) / (1440 - 320));
+    position:relative;
+    &:before {
+      content:'';
+      display:inline-block;
+      position:absolute;
+      left:-20px;
+      bottom:5px;
+      top:5px;
+      border-left:1px solid $yellow;
+    }
   }
 }
 

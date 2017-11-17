@@ -135,5 +135,29 @@ main {
 
 		}
 
+		&.landing-hero {
+			padding-top:300px;
+			padding-bottom:70px;
+			.landing-hero-info {
+				background:$tan;
+				padding: calc(20px + (40 - 20) * (100vw - 400px) / (1440 - 400)) calc(20px + (40 - 20) * (100vw - 400px) / (1440 - 400)) calc(20px + (40 - 20) * (100vw - 400px) / (1440 - 400)) calc(30px + (80 - 30) * (100vw - 400px) / (1440 - 400));
+			}
+		}
+
+		&.landing-tiles {
+			.landing-tile-outter {
+				@include flexbox();
+				.landing-tile {
+					margin-bottom:30px;
+					background:$white;
+				/*	@include flexbox();*/
+					.landing-tile-info {
+						padding:20px;
+					}
+				}
+			}
+			
+		}
+
 	}
 }

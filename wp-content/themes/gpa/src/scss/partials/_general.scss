@@ -1,5 +1,5 @@
 body {
-	
+	background:$tan;
 	@media (min-width: $bp-xlg-min) {
 
 	}
@@ -42,6 +42,14 @@ a {
 
 .row {
 	margin:0;
+}
+
+.whitebg {
+	background:$white;
+}
+
+.bluebg {
+	background:$light-blue;
 }
 
 .white {
@@ -158,4 +166,31 @@ a {
 .flex-center {
 	@include flexbox;
 	@include align-items(center);
+}
+
+.basic-page-wrap {
+	padding-top:60px;
+			.basic-page-content-right {
+				position:relative;
+				top:-90px;
+				.basic-page-content-inner {
+					padding:calc(20px + (40 - 20) * (100vw - 400px) / (1440 - 400));
+				}
+			}
+		}
+
+#secondary {
+	padding:30px;
+	section {
+		padding:0;
+		margin-bottom:30px;
+		ul {
+			padding:0;
+			margin:0;
+			padding-left:20px;
+			li {
+
+			}
+		}
+	}
 }
