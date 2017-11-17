@@ -1,0 +1,63 @@
+header#masthead {
+	background:$blue;
+
+	@media (min-width: $bp-xlg-min) {
+		
+	}
+
+	.site-branding {
+		padding:30px 45px;
+
+		img {
+			width: 85%;
+			height:auto;
+	    display: block;
+	    margin: 0 auto;
+		}
+	}
+
+	#site-navigation {
+		padding:20px 35px 20px 25px;
+		ul {
+			@include flexbox;
+			@include justify-content(space-between);
+			li {
+				font-family: "planeta";
+				-webkit-font-smoothing: antialiased;
+				a {
+					color:$tan;
+				}
+			}
+		}
+	}
+
+	.secondary-nav {
+		padding:12px 25px;
+		background:$dark-blue;
+		text-transform: uppercase;
+		font-size: 10px;
+		color:$light-blue;
+		letter-spacing: 2px;
+		font-family: "planeta";
+  	-webkit-font-smoothing: antialiased;
+  	&:after {
+  		content:'';
+  		display:block;
+  		clear:both;
+  	}
+  	.secondary-nav-menu {
+  		float:left;
+  	}
+  	.header-social {
+			text-align: right;
+			float:right;
+			a {
+				color:$light-blue;
+				margin-left:15px;
+				font-size: 15px;
+				display:inline-block;
+			}
+		}
+	}
+	
+}

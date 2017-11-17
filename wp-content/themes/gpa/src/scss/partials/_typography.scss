@@ -1,0 +1,128 @@
+@font-face {
+ font-family: "planeta";
+ src: url("/wp-content/themes/gpa/fonts/Planeta-Bold.otf") format("otf");
+}
+
+body {
+  color:$text;
+  font-size: calc(16px + (20 - 16) * (100vw - 320px) / (1440 - 320));
+  font-family: 'Lusitana', serif;
+  -webkit-font-smoothing: antialiased;
+  @media (min-width: $bp-xlg-min) {
+    font-size: 20px;
+  }
+  
+}
+
+h1  {
+	font-family: "planeta";
+  -webkit-font-smoothing: antialiased;
+  word-spacing: -5px;
+  font-size: calc(20px + (32 - 20) * (100vw - 320px) / (1440 - 320));
+
+}
+
+h2 {
+  font-family: "planeta";
+  -webkit-font-smoothing: antialiased;
+  word-spacing: -5px;
+  font-size: calc(20px + (38 - 20) * (100vw - 320px) / (1440 - 320));
+  position:relative;
+  &:before {
+    content:'';
+    display:inline-block;
+    position:absolute;
+    left:-20px;
+    bottom:5px;
+    top:5px;
+    border-left:1px solid $yellow;
+  }
+}
+
+h3 {
+  font-size: 25px;
+  font-family: "planeta";
+  word-spacing: -5px;
+  -webkit-font-smoothing: antialiased;
+	a, a:visited {
+   
+    &:hover {
+    
+    }
+  }
+}
+
+h4 {
+  font-style: italic;
+  font-weight: 400;
+  color:$light-blue;
+
+}
+
+p {
+	
+  font-size: calc(14px + (16 - 14) * (100vw - 320px) / (1440 - 320));
+  line-height:2.0;
+  strong {
+   
+  }
+  
+}
+
+strong {
+  font-weight: 600;
+}
+
+
+blockquote {
+
+
+}
+
+.aligncenter {
+	text-align: center;
+  clear:inherit;
+}
+
+a {
+ 
+	&:hover, &:active {
+		outline:none;
+		text-decoration: none;
+	}
+}
+
+.pagelink {
+  font-size: 18px;
+  font-weight: normal;
+  font-family: "planeta";
+  -webkit-font-smoothing: antialiased;
+  @include transition(all .3s ease);
+  &:after {
+    font: normal normal normal 14px/1 FontAwesome;
+    content:'\f054';
+    display:inline-block;
+    margin-left:8px;
+    position:relative;
+    right:0;
+    @include transition(all .3s ease);
+  }
+  &:hover {
+    &:after {
+      @include transition(all .3s ease);
+      right:-3px;
+    }
+  }
+  &.red {
+    color:$red;
+  }
+  &.blue {
+    color:$blue;
+  }
+  img {
+    position: relative;
+    top:-2px;
+    display:inline-block;
+    margin-left:5px;
+  }
+}

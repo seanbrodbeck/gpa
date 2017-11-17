@@ -1,0 +1,18 @@
+{
+  "name": "gpa",
+  "version": "1.0.0",
+  "description": "GPA Website Package",
+  "main": "index.js",
+  "scripts": {
+    "test": "testme",
+    "build-css": "node-sass --include-path scss src/scss/styles.scss dist/css/styles.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\"",
+    "dev": "npm run watch-css"
+  },
+  "author": "Sean Brodbeck",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.5.3",
+    "nodemon": "^1.12.1"
+  }
+}

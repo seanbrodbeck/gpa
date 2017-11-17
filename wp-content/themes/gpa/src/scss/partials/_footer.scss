@@ -1,0 +1,42 @@
+footer#colophon {
+  padding: calc(20px + (60 - 20) * (100vw - 400px) / (1440 - 400)) calc(20px + (100 - 20) * (100vw - 400px) / (1440 - 400)) ;
+  background:$blue;
+	@media (min-width: $bp-xlg-min) {
+		padding:60px 100px;
+	}
+
+	#menu-footer-menu {
+		list-style: none;
+		margin:0;
+		padding:0;
+		li {
+			text-transform: uppercase;
+			font-size: 12px;
+			letter-spacing: 2px;
+			margin-right:20px;
+			display:inline-block;
+			list-style: none;
+			font-family: "planeta";
+	    -webkit-font-smoothing: antialiased;
+			a {
+				color :$white;
+				@include transition(color .4 ease)
+				&:hover {
+					color:$red;
+				}
+			}
+		}
+	}
+
+	.footer-social {
+		text-align: right;
+		a {
+			color:$light-blue;
+			margin-left:15px;
+			font-size: 15px;
+			display:inline-block;
+		}
+	}
+	
+}
+

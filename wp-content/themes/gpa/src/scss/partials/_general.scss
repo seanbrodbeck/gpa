@@ -1,0 +1,161 @@
+body {
+	
+	@media (min-width: $bp-xlg-min) {
+
+	}
+}
+
+a {
+	-webkit-transition: color .3s ease;
+  -moz-transition: color .3s ease;
+  -o-transition: color .3s ease;
+  transition: color .3s ease;
+	&:hover,
+	&:active,
+	&:focus {
+		text-decoration: none;
+	}
+}
+
+
+.nopad {
+	padding: 0!important;
+}
+
+.btn {
+
+	&.wire {
+
+	}
+
+}
+
+.fullwidth {
+	padding-left:calc(20px + (100 - 20) * (100vw - 400px) / (1440 - 400)) ;
+	padding-right:calc(20px + (100 - 20) * (100vw - 400px) / (1440 - 400)) ;
+	  background:$blue;
+		@media (min-width: $bp-xlg-min) {
+			padding-left:100px;
+			padding-right:100px;
+		}
+}
+
+.row {
+	margin:0;
+}
+
+.white {
+	color:$white;
+}
+
+.blue {
+	color:$blue;
+}
+
+.red {
+	color:$red;
+}
+
+.light-blue {
+	color:$light-blue;
+}
+
+
+.desktop-only {
+	display:none;
+	@media (min-width: $bp-sm-min) {
+		display:block;
+	}
+}
+.mobile-only {
+	@media (min-width: $bp-sm-min) {
+		display:none!important;
+	}
+}
+
+.videoWrapper {
+	position: relative;
+	padding-bottom: 53.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+	iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.section-head {
+	margin-bottom:70px;
+}
+
+.gpa-grid-item {
+	&:hover {
+		.gpa-grid-item-overlay {
+			opacity:1;
+		}
+	}
+	.gpa-grid-item-overlay {
+		padding:calc(15px + (30 - 15) * (100vw - 400px) / (1440 - 400)) ;
+		@include flexbox;
+		@include align-items(center);
+		height:100%;
+		opacity:0;
+		@include transition(opacity .3s ease);
+		h3 {
+			width:100%;
+			line-height: 1.3;
+			p {
+				font-size: 25px;
+		    font-family: "planeta";
+		    word-spacing: -5px;
+		    margin:0;
+		    -webkit-font-smoothing: antialiased;
+		    line-height: 1.3;
+			}
+			a {
+				font-size: 18px;
+				margin-top:10px;
+		    font-weight: normal;
+		    font-family: "planeta";
+		    -webkit-font-smoothing: antialiased;
+			}
+		}
+		&.red {
+			background:$red;
+			color:$white;
+		}
+	}
+}
+
+.flexslider {
+	background:none;
+	border:none;
+	padding:0;
+	margin:0;
+	.flex-control-nav {
+		width: 100%;
+    position: absolute;
+    top: -40px;
+    left:-20px;
+    text-align: left;
+    li {
+    	margin-left:0;
+    	margin-right:8px;
+    	a {
+    		background:#dce0ce;
+    		box-shadow: none;
+    		&.flex-active {
+    			background:$yellow;
+    		}
+    	}
+    }
+	}
+}
+
+.flex-center {
+	@include flexbox;
+	@include align-items(center);
+}

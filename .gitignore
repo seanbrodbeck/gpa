@@ -1,0 +1,4 @@
+.DS_Store
+/wp-content/themes/gpa/node_modules
+/wp-content/themes/gpa/sftp-config.json
+*.log
