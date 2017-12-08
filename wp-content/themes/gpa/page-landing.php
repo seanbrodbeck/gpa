@@ -35,7 +35,7 @@ get_header(); ?>
 					<div class="row">
 						<?php if(get_field('landing_page_primary_items')): ?><?php while(has_sub_field('landing_page_primary_items')): ?>
 
-								<div class="col-4 landing-tile-outter">
+								<div class="col-md-4 landing-tile-outter">
 									<div class="landing-tile">
 									<a href="<?php the_sub_field('landing_page_tile_link'); ?>">
 										<img src="<?php the_sub_field('landing_page_tile_photo'); ?>" />
@@ -54,7 +54,7 @@ get_header(); ?>
 					<div class="row">
 						<?php if(get_field('landing_page_secondary_items')): ?><?php while(has_sub_field('landing_page_secondary_items')): ?>
 
-								<div class="col-3 landing-tile-outter">
+								<div class="col-md-3 landing-tile-outter">
 									<div class="landing-tile">
 									<img src="<?php the_sub_field('landing_page_secondary_tile_photo'); ?>" />
 									<div class="landing-tile-info">

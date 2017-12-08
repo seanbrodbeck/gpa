@@ -1,31 +1,99 @@
 header#masthead {
 	background:$blue;
-
+	height:112px;
 	@media (min-width: $bp-xlg-min) {
 		
 	}
 
 	.site-branding {
-		padding:30px 45px;
+		padding: calc(15px + (25 - 15) * (100vw - 400px) / (1440 - 400)) calc(20px + (35 - 20) * (100vw - 400px) / (1440 - 400));
 
 		img {
-			width: 85%;
-			height:auto;
+			width: auto;
+			height:100%;
 	    display: block;
 	    margin: 0 auto;
 		}
 	}
 
 	#site-navigation {
-		padding:20px 35px 20px 25px;
+		padding:0 35px 0 25px;
+		@include flexbox;
+		.menu-main-nav-container {
+			@include flexbox;
+			width:100%;
+		}
 		ul {
 			@include flexbox;
 			@include justify-content(space-between);
+			width:100%;
 			li {
 				font-family: "planeta";
 				-webkit-font-smoothing: antialiased;
+				height:70px;
+				@include flexbox;
+				@include align-items(center);
+				font-size: 15px;
+				word-spacing: -3px;
+				@media (min-width: $bp-sm-min) {
+				
+				}
+				@media (min-width: $bp-md-min) {
+					
+				}
+				@media (min-width: $bp-lg-min) {
+					
+				}
+				@media (min-width: $bp-xlg-min) {
+					
+				}
+				@media (min-width: $bp-xxlg-min) {
+					font-size: 19px;
+				}
+				&:last-of-type {
+				/*	.sub-menu {
+						right:0;
+						left:auto;
+					}*/
+				}
+				&:after {
+					font: normal normal normal 14px/1 FontAwesome;
+			    content: '\f078';
+			    display: inline-block;
+			    margin-left: 8px;
+			    position: relative;
+			    right: 0;
+			    color:$light-blue;
+				}
 				a {
 					color:$tan;
+				}
+			}
+			.sub-menu {
+				background:$dark-blue;
+				display:inherit;
+				@include flex-direction(column);
+				padding:20px;
+				width:auto;
+				margin-left:-20px;
+				li {
+					height:auto;
+					display:block;
+					float:none;
+					margin:3px 0;
+					font-size: 17px;
+					&:after {
+						content:none;
+						margin:0;
+						padding:0;
+						display:none;
+					}
+					a {
+						color:$white;
+						&:hover {
+							color:$light-blue;
+						}
+					}
 				}
 			}
 		}
@@ -47,6 +115,19 @@ header#masthead {
   	}
   	.secondary-nav-menu {
   		float:left;
+  		ul {
+  			margin:0;
+  			padding:0;
+  			li {
+  				list-style: none;
+  				padding:0;
+  				display:inline-block;
+  				a {
+  					margin-right:10px;
+  					color:$light-blue;
+  				}
+  			}
+  		}
   	}
   	.header-social {
 			text-align: right;

@@ -29,4 +29,14 @@
 	    }
 	})
 
+	// $( ".widget-area .menu-item-has-children a" ).click(function() {
+	// 	event.preventDefault();
+	//   $(this).next('ul').slideToggle();
+	// });
+
+	// setTimeout(function() {
+ //        $(".hero-top-left .gpa-grid-item-overlay").show('blind', {}, 500)
+ //  }, 5000);
+
+
 })( jQuery );

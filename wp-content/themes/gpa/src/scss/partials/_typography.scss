@@ -1,6 +1,6 @@
 @font-face {
  font-family: "planeta";
- src: url("/wp-content/themes/gpa/fonts/Planeta-Bold.otf") format("otf");
+ src: url("/wp-content/themes/gpa/dist/fonts/Planeta-Bold.otf") format("opentype");
 }
 
 body {
@@ -35,11 +35,12 @@ h1  {
 h2 {
   font-family: "planeta";
   -webkit-font-smoothing: antialiased;
-  word-spacing: -5px;
+  word-spacing: -6px;
   font-size: calc(20px + (38 - 20) * (100vw - 320px) / (1440 - 320));
   position:relative;
   color:$blue;
   font-size:30px;
+  letter-spacing: -.015em;
 }
 
 .home {
@@ -83,10 +84,15 @@ h4 {
 
 p {
 	
-  font-size: calc(14px + (16 - 14) * (100vw - 320px) / (1440 - 320));
+  font-size: calc(14px + (18 - 14) * (100vw - 320px) / (1440 - 320));
   line-height:2.0;
   strong {
    
+  }
+  &.sectiontitle {
+    color:$light-blue;
+    margin-bottom:10px;
+    font-size: calc(14px + (19 - 14) * (100vw - 320px) / (1440 - 320));
   }
   
 }
@@ -118,6 +124,7 @@ a {
   font-size: 18px;
   font-weight: normal;
   font-family: "planeta";
+  word-spacing: -3px;
   -webkit-font-smoothing: antialiased;
   @include transition(all .3s ease);
   &:after {

@@ -153,6 +153,14 @@ main {
 				/*	@include flexbox();*/
 					.landing-tile-info {
 						padding:20px;
+						a {
+
+							p {
+								color:$text;
+								line-height: 1.6;
+								margin-bottom:10px;
+							}
+						}
 					}
 				}
 			}

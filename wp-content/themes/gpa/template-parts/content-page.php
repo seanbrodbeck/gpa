@@ -12,7 +12,7 @@
 
 <header class="entry-header">
 	<div class="col-sm-8 offset-sm-1">
-		<p><em>Section Title Here</em></p>
+		<p class="sectiontitle"><em><?php if($post->post_parent) { $parent_title = get_the_title($post->post_parent); echo $parent_title.''; } ?></em></p>
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</div>
 </header><!-- .entry-header -->

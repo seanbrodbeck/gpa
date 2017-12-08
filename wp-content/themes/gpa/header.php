@@ -35,8 +35,10 @@
 
 		<div class="col-9 nopad">
 				<div class="secondary-nav">
-					<div class="secondary-nav-menu">Secondary Items Here</div>
-					<div class="col-2 header-social">
+					<div class="secondary-nav-menu">
+						<?php wp_nav_menu( array( 'menu' => 'Secondary Nav') ); ?>
+					</div>
+					<div class="header-social">
 						<a href="#" class="socicon socicon-facebook"></a>
 						<a href="#" class="socicon socicon-twitter"></a>
 						<a href="#" class="socicon socicon-youtube"></a>
