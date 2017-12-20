@@ -30,6 +30,19 @@ a {
 
 }
 
+.tooltip .tooltip-inner {
+	background-color: $dark-blue;
+	border-radius: 0;
+	font-family: "planeta";
+  -webkit-font-smoothing: antialiased;
+  word-spacing: -4px;
+  font-size: 17px;
+}
+
+.tooltip.bs-tooltip-auto[x-placement^=top] .arrow::before, .tooltip.bs-tooltip-top .arrow::before {
+	    border-top-color: $dark-blue;
+}
+
 .fullwidth {
 	padding-left:calc(20px + (100 - 20) * (100vw - 400px) / (1440 - 400)) ;
 	padding-right:calc(20px + (100 - 20) * (100vw - 400px) / (1440 - 400)) ;
@@ -102,7 +115,7 @@ a {
 .gpa-grid-item {
 	&:hover {
 		.gpa-grid-item-overlay {
-			opacity:1;
+			opacity:1!important;
 		}
 	}
 	.gpa-grid-item-overlay {

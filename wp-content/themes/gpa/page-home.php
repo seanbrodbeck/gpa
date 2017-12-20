@@ -22,9 +22,11 @@ get_header(); ?>
 				<div class="row">
 					<div class="col-sm-4 nopad">
 						<div class="hero-top-left gpa-grid-item" style="background:url('<?php echo $hero['hero_grid_block_top_left_image']; ?>') no-repeat center;background-size:cover;">
-							<div class="gpa-grid-item-overlay red"><h3><?php echo $hero['hero_grid_block_top_left_caption']; ?></h3></div>
+							<div class="gpa-grid-item-overlay red"><div><?php echo $hero['hero_grid_block_top_left_caption']; ?></div></div>
 						</div>
-						<div class="hero-bottom-left" style="background:url('<?php echo $hero['hero_grid_block_bottom_left_image']; ?>')no-repeat center;background-size:cover;"></div>
+						<div class="hero-bottom-left gpa-grid-item" style="background:url('<?php echo $hero['hero_grid_block_bottom_left_image']; ?>')no-repeat center;background-size:cover;">
+							<div class="gpa-grid-item-overlay bluebg"><div><?php echo $hero['hero_grid_block_bottom_left_caption']; ?></div></div>
+						</div>
 					</div>
 					<div class="col-sm-4 nopad">
 						<div class="hero-top-middle" style="background:url('<?php echo $hero['hero_grid_block_top_middle_image']; ?>')no-repeat center;background-size:cover;"></div>
@@ -55,13 +57,10 @@ get_header(); ?>
 				<div class="container">
 					<div class="col-sm-8 offset-sm-1">
 
-						<?php if(get_field('about_gpa_slides')): ?>
-
-							<!-- <div class="owl-carousel about-slider"> -->
-							<div class="flexslider">
+						<div class="flexslider">
 								<ul class="slides">
 
-								<?php while(has_sub_field('about_gpa_slides')): ?>
+									<?php if(get_field('about_gpa_slides')): ?><?php while(has_sub_field('about_gpa_slides')): ?>
 
 									<li>
 											<h2><?php the_sub_field('about_gpa_slide_header'); ?></h2>
@@ -69,12 +68,29 @@ get_header(); ?>
 											<a class="pagelink red" href="<?php the_sub_field('about_gpa_slide_link'); ?>"><?php the_sub_field('about_gpa_slide_link_text'); ?></a>
 									</li>
 
-								<?php endwhile; ?>
-								</ul>
-								</div>
-							<!-- </div> -->
+									<?php endwhile; ?><?php endif; ?>
 
-						<?php endif; ?>
+								</ul>
+
+								<?php if(get_field('about_gpa_slides')): ?>
+
+								<div class="flexslider-controls">
+								  <ol class="flex-control-nav flex-control-paging">
+
+									<?php while(has_sub_field('about_gpa_slides')): ?>
+
+									<li><a href="#" data-toggle="tooltip" data-trigger="hover" data-placement="top" title="<?php the_sub_field('about_gpa_slide_header'); ?>"></a></li>
+
+									<?php endwhile; ?>
+
+								 </ol>
+								</div>
+
+								<?php endif; ?>
+
+						</div>
+
+						
 
 					</div>
 				</div>
@@ -106,6 +122,7 @@ get_header(); ?>
 											  <?php the_post_thumbnail('home-news'); ?>
 												<h3><?php the_title(); ?> </h3>
 												<p><?php the_excerpt(); ?></p>
+												<a class="pagelink red" href="<?php the_permalink(); ?>">Read More</a>
 											</a>
 						        </div>
 						    <?php

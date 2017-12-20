@@ -137,7 +137,9 @@ function gpa_scripts() {
 
 	wp_enqueue_script( 'gpa-bootstrap', get_template_directory_uri() . '/dist/js/jquery-1.11.3.min.js', array(), null , true );
 
-	wp_enqueue_script( 'gpa-bootstrap', get_template_directory_uri() . '/dist/js/bootstrap.min.js', array(), null , true );
+	wp_enqueue_script( 'gpa-bootstrap-popper', get_template_directory_uri() . '/dist/js/popper.min.js', array(), null , true );
+
+	wp_enqueue_script( 'gpa-bootstrap-script', get_template_directory_uri() . '/dist/js/bootstrap.min.js', array(), null , true );
 
 	wp_enqueue_script( 'gpa-flexslider-js', get_template_directory_uri() . '/dist/js/jquery.flexslider-min.js', array(), null , true );
 

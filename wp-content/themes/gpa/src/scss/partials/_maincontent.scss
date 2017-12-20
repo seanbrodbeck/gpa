@@ -8,23 +8,23 @@ main {
 
 		&#home-hero {
 			.hero-top-left {
-				height:250px;
+				min-height:200px;
 				height:25vh;
 			}
 			.hero-bottom-left {
-				height:450px;
+				min-height:400px;
 				height:50vh;
 			}
 			.hero-top-middle {
-				height:350px;
+				min-height:300px;
 				height:37.5vh;
 			}
 			.hero-bottom-middle {
-				height:350px;
+				min-height:300px;
 				height:37.5vh;
 			}
 			.hero-bottom-gpa-logo {
-				height:350px;
+				min-height:300px;
 				height:37.5vh;
 				background:$blue;
 				padding: calc(20px + (50 - 20) * (100vw - 400px) / (1440 - 400));
@@ -32,7 +32,7 @@ main {
 				@include align-items(center);
 			}
 			.hero-top-right-announcement {
-				height:250px;
+				min-height:200px;
 				height:25vh;
 				background:$light-blue;
 				padding: calc(15px + (30 - 15) * (100vw - 400px) / (1440 - 400)) calc(20px + (30 - 20) * (100vw - 400px) / (1440 - 400));
@@ -41,11 +41,11 @@ main {
 				@include align-items(center);
 			}
 			.hero-bottom-right-1 {
-				height:225px;
+				min-height:200px;
 				height:25vh;
 			}
 			.hero-bottom-right-2 {
-				height:225px;
+				min-height:200px;
 				height:25vh;
 			}
 		}
@@ -73,6 +73,24 @@ main {
 				}
 				p {
 					color:$white;
+				}
+			}
+
+			.owl-nav {
+				position:absolute;
+				top:20%;
+				left:0;
+				right:0;
+				width:100%;
+				.owl-prev {
+					position:absolute;
+					left:-40px;
+					font-size: 20px;	
+				}
+				.owl-next {
+					position:absolute;
+					right:-40px;
+					font-size: 20px;
 				}
 			}
 		}

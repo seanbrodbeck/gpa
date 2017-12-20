@@ -873,6 +873,17 @@ a {
 .nopad {
   padding: 0 !important; }
 
+.tooltip .tooltip-inner {
+  background-color: #193368;
+  border-radius: 0;
+  font-family: "planeta";
+  -webkit-font-smoothing: antialiased;
+  word-spacing: -4px;
+  font-size: 17px; }
+
+.tooltip.bs-tooltip-auto[x-placement^=top] .arrow::before, .tooltip.bs-tooltip-top .arrow::before {
+  border-top-color: #193368; }
+
 .fullwidth {
   padding-left: calc(20px + (100 - 20) * (100vw - 400px) / (1440 - 400));
   padding-right: calc(20px + (100 - 20) * (100vw - 400px) / (1440 - 400));
@@ -930,7 +941,7 @@ a {
   margin-bottom: 70px; }
 
 .gpa-grid-item:hover .gpa-grid-item-overlay {
-  opacity: 1; }
+  opacity: 1 !important; }
 
 .gpa-grid-item .gpa-grid-item-overlay {
   padding: calc(15px + (30 - 15) * (100vw - 400px) / (1440 - 400));
@@ -1196,19 +1207,19 @@ main section {
     main section {
       padding: 140px 0; } }
   main section#home-hero .hero-top-left {
-    height: 250px;
+    min-height: 200px;
     height: 25vh; }
   main section#home-hero .hero-bottom-left {
-    height: 450px;
+    min-height: 400px;
     height: 50vh; }
   main section#home-hero .hero-top-middle {
-    height: 350px;
+    min-height: 300px;
     height: 37.5vh; }
   main section#home-hero .hero-bottom-middle {
-    height: 350px;
+    min-height: 300px;
     height: 37.5vh; }
   main section#home-hero .hero-bottom-gpa-logo {
-    height: 350px;
+    min-height: 300px;
     height: 37.5vh;
     background: #25438d;
     padding: calc(20px + (50 - 20) * (100vw - 400px) / (1440 - 400));
@@ -1222,7 +1233,7 @@ main section {
     -ms-align-items: center;
     align-items: center; }
   main section#home-hero .hero-top-right-announcement {
-    height: 250px;
+    min-height: 200px;
     height: 25vh;
     background: #5fcae3;
     padding: calc(15px + (30 - 15) * (100vw - 400px) / (1440 - 400)) calc(20px + (30 - 20) * (100vw - 400px) / (1440 - 400));
@@ -1237,10 +1248,10 @@ main section {
     -ms-align-items: center;
     align-items: center; }
   main section#home-hero .hero-bottom-right-1 {
-    height: 225px;
+    min-height: 200px;
     height: 25vh; }
   main section#home-hero .hero-bottom-right-2 {
-    height: 225px;
+    min-height: 200px;
     height: 25vh; }
   main section#home-about-slider {
     background: #f5f9e9; }
@@ -1256,6 +1267,20 @@ main section {
       margin-top: 30px; }
     main section#home-news a p {
       color: #FFF; }
+    main section#home-news .owl-nav {
+      position: absolute;
+      top: 20%;
+      left: 0;
+      right: 0;
+      width: 100%; }
+      main section#home-news .owl-nav .owl-prev {
+        position: absolute;
+        left: -40px;
+        font-size: 20px; }
+      main section#home-news .owl-nav .owl-next {
+        position: absolute;
+        right: -40px;
+        font-size: 20px; }
   main section#home-advantage {
     background: #f5f9e9; }
     main section#home-advantage .cornerstone {
